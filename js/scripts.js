@@ -1,7 +1,8 @@
 // BACK END //
-function Contact(first, last) {
+function Contact(first, last, email) {
   this.firstName = first;
   this.lastName = last;
+  this.email = email;
 }
 
 Contact.prototype.fullName = function() {
@@ -18,19 +19,13 @@ $(function() {
 
     var inputtedFirstName = $("#first-name").val();
     var inputtedLastName = $("#last-name").val();
+    var inputtedEmail = $("#email").val();
 
-    var newContact = new Contact(inputtedFirstName, inputtedLastName);
+    var newContact = new Contact(inputtedFirstName, inputtedLastName, inputtedEmail);
 
-    $("ul#contacts").append("<li><span class='contact'>" + newContact.fullName() + "</span></li>");
+    $("#show-contact").show();
 
-    $(".contact").last().click(function() {
-      $("#show-contact").show();
-      $("#show-contact h3").text(newContact.firstName);
-      $(".first-name").text(newContact.firstName);
-      $(".last-name").text(newContact.lastName);
-    })
+    $("#table").append("<tr><td><span class='first-name'>" + newContact.firstName + "</span></td><td><span class='last-name'>" + newContact.lastName + "</span></td><td><span class='email'>" + newContact.email + "</span></td></tr>")
 
-    $("input#first-name").val("");
-    $("input#last-name").val("");
   });
 });
