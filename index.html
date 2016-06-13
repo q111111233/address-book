@@ -24,10 +24,17 @@
             <label for="last-name">Enter a last name:</label>
             <input type="text" id="last-name" class="form-control">
           </div>
-          <div class="form-group">
-            <label for="email">Enter an email:</label>
-            <input type="text" id="email" class="form-control">
+
+          <div id="new-email">
+            <div class="new-email">
+              <div class="form-group">
+                <label for="new-email">Enter an email:</label>
+                <input type="text" id="new-email" class="form-control">
+              </div>
+            </div>
           </div>
+
+          <span class="btn btn-lg btn-info" id="add-email">Add another email</span>
 
           <button type="submit" class="btn btn-lg btn-primary">Add Contact</button>
         </form>
@@ -38,24 +45,13 @@
 
       </ul>
       <div class="show-contact">
-        <!-- <h3></h3>
-
-        <p><span class="first-name"></span></p>
-        <p><span class="last-name"></span></p>
-        <p><span class="email"></span></p>
-      </div> -->
 
       <table id="table" class="table">
-        <tr>
+        <tr id="fields">
           <td>First Name</td>
           <td>Last Name</td>
           <td>Email</td>
         </tr>
-        <!-- <tr>
-          <td><span class="first-name"></span></td>
-          <td><span class="last-name"></span></td>
-          <td><span class="email"></span></td>
-        </tr> -->
       </table>
     </div>
   </body>
